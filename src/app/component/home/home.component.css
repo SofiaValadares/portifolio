@@ -1,0 +1,59 @@
+:host {
+  display: block;
+  width: 100vw; /* Largura total da viewport */
+  height: 100vh; /* Altura total da viewport */
+  margin: 0;
+  padding: 0;
+  background-color: #FCFFF3; /* Cor de fundo */
+  position: relative; /* Base para elementos absolutos */
+  overflow: hidden;
+  z-index: 99;/* Evita que os círculos saiam da tela */
+}
+
+:host::before,
+:host::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%; /* Torna os elementos circulares */
+  z-index: 99; /* Coloca os círculos atrás do conteúdo */
+}
+
+:host::before {
+  width: 60vw; /* 50% da largura da tela */
+  height: 50vw; /* Mantém proporção circular */
+  top: -30vh; /* Posição relativa ao topo */
+  left: -20vw; /* Posição relativa à esquerda */
+  background: radial-gradient(circle, #A4FEC1, transparent 90%);
+  filter: blur(40px); /* Desfoque para suavizar */
+}
+
+:host::after {
+  width: 100vw; /* 30% da largura da tela */
+  height: 60vw;
+  bottom: -80vh; /* Posição relativa ao fundo */
+  right: -20vw; /* Posição relativa à direita */
+  background: radial-gradient(circle, #A4FEC1, transparent 90%);
+  filter: blur(30px); /* Desfoque menor */
+}
+
+.arrow {
+  position: absolute;
+  width: 3vw;
+  height: 8vh;
+  left: 50%;
+  bottom: 3%;
+  z-index: 100;
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+  animation: moveUpDown 2s infinite ease-in-out; /* Aplica a animação */
+}
+
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translate(-50%, 0); /* Posição inicial */
+  }
+  50% {
+    transform: translate(-50%, -20px); /* Move para cima */
+  }
+}
+
+

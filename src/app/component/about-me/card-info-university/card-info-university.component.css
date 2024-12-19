@@ -1,0 +1,32 @@
+.card-info-university-div {
+  width: 75vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: right;
+  margin-bottom: 20px;
+}
+
+.card-info-university-div h1 {
+  font-family: 'Lexend', sans-serif; /* Família de fontes */
+  font-style: normal; /* Estilo de fonte */
+  font-weight: 300; /* Espessura da fonte */
+  font-size: 150%; /* Tamanho da fonte */
+  line-height: 120%; /* Altura da linha */
+  color: #000000; /* Cor do texto */
+  overflow: hidden; /* Garante que o texto não ultrapasse o container */
+  text-align: right;
+  margin: 0;
+}
+
+.card-info-university-div p {
+  font-family: 'Lexend', sans-serif; /* Família de fontes */
+  font-style: normal; /* Estilo de fonte */
+  font-weight: 120; /* Espessura da fonte */
+  font-size: 120%; /* Tamanho da fonte */
+  line-height: 100%; /* Altura da linha */
+  color: #000000; /* Cor do texto */
+  overflow: hidden; /* Garante que o texto não ultrapasse o container */
+  text-align: right;
+  margin: 0;
+}
+
